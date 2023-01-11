@@ -1,5 +1,4 @@
 // Next.js API route support: https://nextjs.org/docs/api-routes/introduction
-import connect from "../../model/mongoConnect";
 import type { NextApiRequest, NextApiResponse } from "next";
 
 type Data = {
@@ -10,6 +9,6 @@ export default function handler(
   req: NextApiRequest,
   res: NextApiResponse<Data>
 ) {
-  connect();
+  console.log("index handler");
   res.status(200).json({ name: "John Doe" });
 }
